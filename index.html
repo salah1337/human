@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script> -->
+    <script src="./gsap.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <audio id="bgsound" src="./sounds/bg.mp3" autoplay></audio>
+        <audio id="bonjoursound" src="./sounds/Bonjour.mp3"></audio>
+        <audio id="humainsound" src="./sounds/Humain.mp3"></audio>
+        <audio id="lesordisound" src="./sounds/LesOrdi.mp3"></audio>
+        <audio id="qstfsound" src="./sounds/qstf.mp3"></audio>
+        <audio id="rep1sound" src="./sounds/Rep1.mp3"></audio>
+        <audio id="rep2sound" src="./sounds/Rep2.mp3"></audio>
+        <audio id="veuillezsound" src="./sounds/Veuillez.mp3"></audio>
+        
+        <audio id="bonjoursound-en" src="./sounds/Bonjour-english.mp3"></audio>
+        <audio id="humainsound-en" src="./sounds/Humain-english.mp3"></audio>
+        <audio id="lesordisound-en" src="./sounds/LesOrdi-english.mp3"></audio>
+        <audio id="qstfsound-en" src="./sounds/qstf-english.mp3"></audio>
+        <audio id="rep1sound-en" src="./sounds/Rep1-english.mp3"></audio>
+        <audio id="rep2sound-en" src="./sounds/Rep2-english.mp3"></audio>
+        <audio id="veuillezsound-en" src="./sounds/Veuillez-english.mp3"></audio>
+
+        <audio id="bonjoursound-ar" src="./sounds/Bonjour-arabic.mp3"></audio>
+        <audio id="humainsound-ar" src="./sounds/Humain-arabic.mp3"></audio>
+        <audio id="lesordisound-ar" src="./sounds/LesOrdi-arabic.mp3"></audio>
+        <audio id="qstfsound-ar" src="./sounds/qstf-arabic.mp3"></audio>
+        <audio id="rep1sound-ar" src="./sounds/Rep1-arabic.mp3"></audio>
+        <audio id="rep2sound-ar" src="./sounds/Rep2-arabic.mp3"></audio>
+        <audio id="veuillezsound-ar" src="./sounds/Veuillez-arabic.mp3"></audio>
+
+        <div id="circle">
+            <div id="circleShape"></div>
+            <div id="humantext" class="robotext">Human.</div>
+        </div>
+        <div id="startext" class="robotext clickable">Start</div>
+        <div id="languages">
+            <div onclick="choseLang(0)" class="language clickable robotext"><p>Francais</p></div>
+            <div onclick="choseLang(1)" class="language clickable robotext"><p>English</p></div>
+            <div onclick="choseLang(2)" class="language clickable robotext"><p>العربية</p></div>
+        </div>
+        <div id="captcha" class="robotext">
+            <div class="text">Veuillez confirmer que vous êtes un humain :</div>
+            <div class="button clickable" id="checkboxBtn">
+                <input type="checkbox" name="" id="checkbox">
+                <span>Je suis un humain.</span>
+            </div>
+        </div>
+        <div id="arrows">
+            <svg onclick="lastText()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="clickable arrow bi bi-chevron-left"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+            </svg>
+            <svg onclick="nextText()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="clickable arrow bi bi-chevron-right"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+        </div>
+        <div id="hadaf" class="robotext">
+            <div onclick="showvid1()" class="clickable" id="one">1</div>
+            <div onclick="showvid2()" class="clickable" id="zero">0</div>
+        </div>
+    </div>
+    <div id="video0Container"><video id="video0"></div>
+    <div id="video1Container"><video id="video1"></video></div>
+</body>
+<script src="app.js"></script>
+</html>
