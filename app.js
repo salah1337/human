@@ -9,35 +9,54 @@ const humainText = document.getElementById("humantext");
 const arrows = document.getElementById("arrows");
 const hadaf = document.getElementById("hadaf");
 
-const bonjoursound = document.getElementById('bonjoursound')
-const humainsound = document.getElementById('humainsound')
-const lesordisound = document.getElementById('lesordisound')
-const qstfsound = document.getElementById('qstfsound')
-const rep1sound = document.getElementById('rep1sound')
-const rep2sound = document.getElementById('rep2sound')
-const veuillezsound = document.getElementById('veuillezsound')
+const bonjoursound = document.getElementById("bonjoursound");
+const humainsound = document.getElementById("humainsound");
+const lesordisound = document.getElementById("lesordisound");
+const qstfsound = document.getElementById("qstfsound");
+const rep1sound = document.getElementById("rep1sound");
+const rep2sound = document.getElementById("rep2sound");
+const veuillezsound = document.getElementById("veuillezsound");
 
-const bonjoursoundEn = document.getElementById('bonjoursound-en')
-const humainsoundEn = document.getElementById('humainsound-en')
-const lesordisoundEn = document.getElementById('lesordisound-en')
-const qstfsoundEn = document.getElementById('qstfsound-en')
-const rep1soundEn = document.getElementById('rep1sound-en')
-const rep2soundEn = document.getElementById('rep2sound-en')
-const veuillezsoundEn = document.getElementById('veuillezsound-en')
+const bonjoursoundEn = document.getElementById("bonjoursound-en");
+const humainsoundEn = document.getElementById("humainsound-en");
+const lesordisoundEn = document.getElementById("lesordisound-en");
+const qstfsoundEn = document.getElementById("qstfsound-en");
+const rep1soundEn = document.getElementById("rep1sound-en");
+const rep2soundEn = document.getElementById("rep2sound-en");
+const veuillezsoundEn = document.getElementById("veuillezsound-en");
 
-const bonjoursoundAr = document.getElementById('bonjoursound-ar')
-const humainsoundAr = document.getElementById('humainsound-ar')
-const lesordisoundAr = document.getElementById('lesordisound-ar')
-const qstfsoundAr = document.getElementById('qstfsound-ar')
-const rep1soundAr = document.getElementById('rep1sound-ar')
-const rep2soundAr = document.getElementById('rep2sound-ar')
-const veuillezsoundAr = document.getElementById('veuillezsound-ar')
+const bonjoursoundAr = document.getElementById("bonjoursound-ar");
+const humainsoundAr = document.getElementById("humainsound-ar");
+const lesordisoundAr = document.getElementById("lesordisound-ar");
+const qstfsoundAr = document.getElementById("qstfsound-ar");
+const rep1soundAr = document.getElementById("rep1sound-ar");
+const rep2soundAr = document.getElementById("rep2sound-ar");
+const veuillezsoundAr = document.getElementById("veuillezsound-ar");
 
-var sounds = [[bonjoursound, lesordisound, rep1sound, rep2sound, humainsound, qstfsound], 
-[bonjoursoundEn, lesordisoundEn, rep1soundEn, rep2soundEn, humainsoundEn, qstfsoundEn], 
-[bonjoursoundAr, lesordisoundAr, rep1soundAr, rep2soundAr, humainsoundAr, qstfsoundAr]]
+const confirmation = document.getElementById("confirmationText");
+const confirmation2 = document.getElementById("confirmationText2");
 
-bgsound.play()
+var sounds = [
+  [bonjoursound, lesordisound, rep1sound, rep2sound, humainsound, qstfsound],
+  [
+    bonjoursoundEn,
+    lesordisoundEn,
+    rep1soundEn,
+    rep2soundEn,
+    humainsoundEn,
+    qstfsoundEn,
+  ],
+  [
+    bonjoursoundAr,
+    lesordisoundAr,
+    rep1soundAr,
+    rep2soundAr,
+    humainsoundAr,
+    qstfsoundAr,
+  ],
+];
+
+bgsound.play();
 
 const t1 = new TimelineLite();
 
@@ -54,28 +73,49 @@ var currentLanguage = 0;
 //   "Est tu un 1 ou un 0 ?",
 //   "Est tu un 1 ou un 0 ?",
 // ];
-const txt = [["Human.",
-"Bonjour Humain,",
-"Les ordinateurs utilisent un système binaire pour stocker des données.",
-"Lorsqu'une cellule mémoire contient quelque chose, c’est représenté par un 1 .",
-"Quand elle ne contient rien, c’est représenté par un 0..",
-"Humain,",
-"Est tu un 1 ou un 0 ?",
-"Est tu un 1 ou un 0 ?",], 
-["Human.", "Hello Human,", "Computers use a binary system to store data.", "When a memory cell contains something, it's represented by a 1 .", "When it contains nothing, it is represented by a 0..", "Human,", "Are you a 1 or a 0?", "Are you a 1 or a 0?",], 
-["إنسان.",
-"مرحبًا أيها الإنسان" ,
-"تستخدم أجهزة الكمبيوتر نظامًا ثنائيًا لتخزين البيانات." ,
-"عندما تحتوي خلية ذاكرة على شيء ما ، يتم تمثيلها بـ 1." ,
-"عندما لا تحتوي على أي شيء ، يتم تمثيلها بـ 0 .." ,
-"إنسان،",
-"هل أنت 1 أم 0؟" ,
-"هل أنت 1 أم 0؟"]]
+const txt = [
+  [
+    "Human.",
+    "Bonjour Humain,",
+    "Les ordinateurs utilisent un système binaire pour stocker des données.",
+    "Lorsqu'une cellule mémoire contient quelque chose, c’est représenté par un 1 .",
+    "Quand elle ne contient rien, c’est représenté par un 0..",
+    "Humain,",
+    "Est tu un 1 ou un 0 ?",
+    "Est tu un 1 ou un 0 ?",
+  ],
+  [
+    "Human.",
+    "Hello Human,",
+    "Computers use a binary system to store data.",
+    "When a memory cell contains something, it's represented by a 1 .",
+    "When it contains nothing, it is represented by a 0..",
+    "Human,",
+    "Are you a 1 or a 0?",
+    "Are you a 1 or a 0?",
+  ],
+  [
+    "Human.",
+    "Wsh abnadm,",
+    "Les ordinateurs utilisent un système binaire pour stocker des données.",
+    "Lorsqu'une cellule mémoire contient quelque chose, c’est représenté par un 1 .",
+    "Quand elle ne contient rien, c’est représenté par un 0..",
+    "Humain,",
+    "Est tu un 1 ou un 0 ?",
+    "Est tu un 1 ou un 0 ?",
+  ],
+];
 
 humainText.innerText = txt[currentLanguage][currentTxt];
-
+const confirmationTxt = [
+  "Veuillez confirmer que vous êtes un humain :",
+  "Please confirm that you are human:",
+];
+const confirmationTxt2 = ["Je suis un humain.", "I am human."];
 function choseLang(l) {
-  currentLanguage = l
+  currentLanguage = l;
+  confirmation.innerHTML = confirmationTxt[l];
+  confirmation2.innerHTML = confirmationTxt2[l];
   console.log(`chose ${l}`);
 }
 
@@ -95,38 +135,69 @@ function sleep(ms) {
 }
 
 start.addEventListener("click", () => {
-  circleSlide();
-  wrapper.style.flexDirection = "row";
+  if (window.innerWidth < 900) {
+    t1.to(
+      start,
+      1,
+      {
+        display: "none",
+      },
+      "-= 0.5"
+    ).to(languages, 2, {
+      display: "block",
+    });
+  } else {
+    circleSlide();
+    wrapper.style.flexDirection = "row";
+  }
 });
 
 checkbox.addEventListener("click", () => {
-  t1.to(captcha, 0.5, {
-    display: "none",
-  })
-    .fromTo(
-      circle,
-      1,
-      {
-        x: -200,
-      },
-      {
-        x: 0,
-      }
-    )
-    .to(humainText, 0.5, { opacity: 0, color: "#fff" })
-    .to(wrapper, 1, {
-      background: "#000000",
-      flexDirection: "column",
+  if (window.innerWidth < 900) {
+    t1.to(captcha, 0.5, {
+      display: "none",
     })
-    .to(humainText, 0, { opacity: 1 })
-    .to(arrows, 0, {display: 'flex'}).then(()=>{
-      currentTxt++;
-      humainText.innerText = txt[currentLanguage][currentTxt];
+      .to(humainText, 0.5, { opacity: 0, color: "#fff" })
+      .to(wrapper, 1, {
+        background: "#000000",
+        flexDirection: "column",
+      })
+      .to(humainText, 0, { opacity: 1 })
+      .to(arrows, 0, { display: "flex" })
+      .then(() => {
+        currentTxt++;
+        humainText.innerText = txt[currentLanguage][currentTxt];
+      });
+  } else {
+    t1.to(captcha, 0.5, {
+      display: "none",
     })
-    
-    if (currentLanguage == 0) bonjoursound.play()
-    if (currentLanguage == 1) bonjoursoundEn.play()
-    if (currentLanguage == 2) bonjoursoundAr.play()
+      .fromTo(
+        circle,
+        1,
+        {
+          x: -200,
+        },
+        {
+          x: 0,
+        }
+      )
+      .to(humainText, 0.5, { opacity: 0, color: "#fff" })
+      .to(wrapper, 1, {
+        background: "#000000",
+        flexDirection: "column",
+      })
+      .to(humainText, 0, { opacity: 1 })
+      .to(arrows, 0, { display: "flex" })
+      .then(() => {
+        currentTxt++;
+        humainText.innerText = txt[currentLanguage][currentTxt];
+      });
+  }
+
+  if (currentLanguage == 0) bonjoursound.play();
+  if (currentLanguage == 1) bonjoursoundEn.play();
+  if (currentLanguage == 2) bonjoursoundAr.play();
   // sleep(2000);
   // currentTxt++;
   // humainText.innerText = txt[currentLanguage][currentTxt];
@@ -140,11 +211,11 @@ Array.from(language).forEach((language) => {
     }).to(captcha, 0, {
       display: "block",
     });
-    checkbox.checked = false
+    checkbox.checked = false;
     // veuillezsound.play()
-    if (currentLanguage == 0) veuillezsound.play()
-    if (currentLanguage == 1) veuillezsoundEn.play()
-    if (currentLanguage == 2) veuillezsoundAr.play()
+    if (currentLanguage == 0) veuillezsound.play();
+    if (currentLanguage == 1) veuillezsoundEn.play();
+    if (currentLanguage == 2) veuillezsoundAr.play();
   });
 });
 
@@ -181,65 +252,61 @@ function nextText() {
   currentTxt++;
   humainText.innerText = txt[currentLanguage][currentTxt];
 
-  sounds[currentLanguage].forEach(sound => {
-    sound.pause()
-    sound.currentTime = 0
-  })
+  sounds[currentLanguage].forEach((sound) => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
 
-  sounds[currentLanguage][currentTxt-1].play()
+  sounds[currentLanguage][currentTxt - 1].play();
 }
 
 function lastText() {
   currentTxt--;
   humainText.innerText = txt[currentLanguage][currentTxt];
-  
-  
-  sounds[currentLanguage].forEach(sound => {
-    sound.pause()
-  })
 
-  sounds[currentLanguage][currentTxt-1].play()
+  sounds[currentLanguage].forEach((sound) => {
+    sound.pause();
+  });
+
+  sounds[currentLanguage][currentTxt - 1].play();
 }
 
-let vid1 = document.getElementById('video1')
-let vid1C = document.getElementById('video1Container')
+let vid1 = document.getElementById("video1");
+let vid1C = document.getElementById("video1Container");
 
-function showvid1() {  
-  bgsound.pause()
-  wrapper.style.display = "none"
-  vid1C.style.display = "block"
-  
-  
-  var source = document.createElement('source');
-  
-  if (currentLanguage == 0) source.setAttribute('src', './vidz/1.mp4');
-  if (currentLanguage == 1) source.setAttribute('src', './vidz/1-en.mp4');
-  if (currentLanguage == 2) source.setAttribute('src', './vidz/1-ar.mp4');
+function showvid1() {
+  bgsound.pause();
+  wrapper.style.display = "none";
+  vid1C.style.display = "block";
 
-  source.setAttribute('type', 'video/mp4');
+  var source = document.createElement("source");
+
+  if (currentLanguage == 0) source.setAttribute("src", "./vidz/1.mp4");
+  if (currentLanguage == 1) source.setAttribute("src", "./vidz/1-en.mp4");
+  if (currentLanguage == 2) source.setAttribute("src", "./vidz/1-ar.mp4");
+
+  source.setAttribute("type", "video/mp4");
 
   vid1.appendChild(source);
   vid1.play();
-
 }
 
-let vid0 = document.getElementById('video0')
-let vid0C = document.getElementById('video0Container')
+let vid0 = document.getElementById("video0");
+let vid0C = document.getElementById("video0Container");
 
 function showvid2() {
-  bgsound.pause()
-  wrapper.style.display = "none"
-  vid0C.style.display = "block"
+  bgsound.pause();
+  wrapper.style.display = "none";
+  vid0C.style.display = "block";
 
-  var source = document.createElement('source');
-  
-  if (currentLanguage == 0) source.setAttribute('src', './vidz/0.mp4');
-  if (currentLanguage == 1) source.setAttribute('src', './vidz/0-en.mp4');
-  if (currentLanguage == 2) source.setAttribute('src', './vidz/0-ar.mp4');
+  var source = document.createElement("source");
 
-  source.setAttribute('type', 'video/mp4');
+  if (currentLanguage == 0) source.setAttribute("src", "./vidz/0.mp4");
+  if (currentLanguage == 1) source.setAttribute("src", "./vidz/0-en.mp4");
+  if (currentLanguage == 2) source.setAttribute("src", "./vidz/0-ar.mp4");
+
+  source.setAttribute("type", "video/mp4");
 
   vid0.appendChild(source);
   vid0.play();
-
 }
