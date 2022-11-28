@@ -281,8 +281,8 @@ function showvid1() {
 
   var source = document.createElement("source");
 
-  if (currentLanguage == 0) source.setAttribute("src", "https://media.githubusercontent.com/media/salah1337/human/master/vidz/1.mp4?token=APO6X3QFTB2APXEC5WSJ5RLDQJQC2");
-  if (currentLanguage == 1) source.setAttribute("src", "https://media.githubusercontent.com/media/salah1337/human/master/vidz/1-eng.mp4?token=APO6X3W7EZWAG5G5XKOTZLDDQJPG6");
+  if (currentLanguage == 0) source.setAttribute("src", "https://media.githubusercontent.com/media/salah1337/human/master/vidz/1.mp4?token=APO6X3UIA6G7ZWZK4MEI443DQUE76");
+  if (currentLanguage == 1) source.setAttribute("src", "https://media.githubusercontent.com/media/salah1337/human/master/vidz/1-eng.mp4?token=APO6X3R4QXNSMHRAMMFHLT3DQUE6I");
   if (currentLanguage == 2) source.setAttribute("src", "./vidz/1-ar.mp4");
 
   source.setAttribute("type", "video/mp4");
@@ -301,8 +301,8 @@ function showvid2() {
 
   var source = document.createElement("source");
 
-  if (currentLanguage == 0) source.setAttribute("src", "https://media.githubusercontent.com/media/salah1337/human/master/vidz/0.mp4?token=APO6X3RQFR7XU3XGOPM24XLDQJQFK");
-  if (currentLanguage == 1) source.setAttribute("src", "https://media.githubusercontent.com/media/salah1337/human/master/vidz/0-en.mp4?token=APO6X3UAKJGMHJEFAAEZ4KLDQJQUY");
+  if (currentLanguage == 0) source.setAttribute("src", "https://media.githubusercontent.com/media/salah1337/human/master/vidz/0.mp4?token=APO6X3UES6UHGVZDRTKAN4TDQUE2I");
+  if (currentLanguage == 1) source.setAttribute("src", "https://media.githubusercontent.com/media/salah1337/human/master/vidz/0-en.mp4?token=APO6X3XDCTGY73DJ67V7VK3DQUEXY");
   if (currentLanguage == 2) source.setAttribute("src", "./vidz/0-ar.mp4");
 
   source.setAttribute("type", "video/mp4");
