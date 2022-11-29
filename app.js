@@ -302,7 +302,7 @@ function showvid2() {
   var source = document.createElement("source");
 
   if (currentLanguage == 0) source.setAttribute("src", "https://media.githubusercontent.com/media/salah1337/human/master/vidz/0.mp4?token=APO6X3UES6UHGVZDRTKAN4TDQUE2I");
-  if (currentLanguage == 1) source.setAttribute("src", "https://media.githubusercontent.com/media/salah1337/human/master/vidz/0-en.mp4?token=APO6X3XDCTGY73DJ67V7VK3DQUEXY");
+  if (currentLanguage == 1) source.setAttribute("src", "https://media.githubusercontent.com/media/salah1337/human/master/vidz/0-en.mp4?token=APO6X3SBUIX7BMLENUTWJXTDQVNF2");
   if (currentLanguage == 2) source.setAttribute("src", "./vidz/0-ar.mp4");
 
   source.setAttribute("type", "video/mp4");
