@@ -281,8 +281,8 @@ function showvid1() {
 
   var source = document.createElement("source");
 
-  if (currentLanguage == 0) source.setAttribute("src", "./vidz/1.mp4");
-  if (currentLanguage == 1) source.setAttribute("src", "./vidz/1-en.mp4");
+  if (currentLanguage == 0) source.setAttribute("src", "https://wensto.com/clyde/1.mp4");
+  if (currentLanguage == 1) source.setAttribute("src", ".https://wensto.com/clyde/1-eng.mp4");
   if (currentLanguage == 2) source.setAttribute("src", "./vidz/1-ar.mp4");
 
   source.setAttribute("type", "video/mp4");
@@ -301,8 +301,8 @@ function showvid2() {
 
   var source = document.createElement("source");
 
-  if (currentLanguage == 0) source.setAttribute("src", "./vidz/0.mp4");
-  if (currentLanguage == 1) source.setAttribute("src", "./vidz/0-en.mp4");
+  if (currentLanguage == 0) source.setAttribute("src", "https://wensto.com/clyde/0.mp4");
+  if (currentLanguage == 1) source.setAttribute("src", "https://wensto.com/clyde/0-en.mp4");
   if (currentLanguage == 2) source.setAttribute("src", "./vidz/0-ar.mp4");
 
   source.setAttribute("type", "video/mp4");
